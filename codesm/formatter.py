@@ -158,7 +158,7 @@ class Formatter:
             available = proc.returncode == 0
             self._available_formatters[formatter] = available
             return available
-        except Exception:
+        except Exception as e :
             self._available_formatters[formatter] = False
             return False
     
